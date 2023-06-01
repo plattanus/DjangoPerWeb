@@ -36,9 +36,6 @@
             <div class="article-content bg-color markdown-body">
                 <div class="post-content" style="padding: 10px 20px 20px 10px">
                     <div class="BlogAnchor" style="text-indent: 20px; font-size: 14px; margin-bottom: 30px">
-                        <!-- <p>
-                            <b id="AnchorContentToggle" title="收起" style="cursor:pointer;">目录[-]</b>
-                        </p> -->
                         <div class="AnchorContent" id="AnchorContent"></div>
                     </div>
                     {{ blog.content|custom_markdown|safe }}
@@ -48,32 +45,10 @@
             <div class="article-fx"><a class="fx-btn img-circle" href="javascript:;" onclick="showImage('/static/images/reward.jpg')">打赏</a>
                 <script>
                     function showImage(imageName) {
-                    //   var imageUrl = "/static/images/" + imageName;
                       window.open(imageName, "Image", "width=500,height=500");
                     }
                 </script>
-                <!-- <a href="#" onclick="showImage('/static/images/reward.jpg')"></a> -->
-                <!-- <div class="bd-fx arc-bdfx">
-                    <i class="el-remove fx-close"></i>
-                    <ul class="bdsharebuttonbox">
-                        <li><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></li>
-                        <li><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
-                        <li><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></li>
-                        <li><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a></li>
-                    </ul>
-                    <script>window._bd_share_config = {
-                        "common": {
-                            "bdSnsKey": {},
-                            "bdText": "",
-                            "bdMini": "2",
-                            "bdMiniList": false,
-                            "bdPic": "",
-                            "bdStyle": "1",
-                            "bdSize": "32"
-                        }, "share": {}
-                    };
-                    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
-                </div> -->
+                
             </div>
             <!--END 分享-->
             <div class="cyReward " style="text-align: center">
@@ -112,8 +87,6 @@
 
 {% include 'blog/component/auto_push_baidu.html' %}
 
-
-
 {% block js %}
 
     <script src="/static/js/jquery.2.1.4.min.js"></script>
@@ -146,17 +119,6 @@
                 $(".newh5").css("margin-left", 60);
                 $(".newh6").css("margin-left", 80);
             });
-            // $("#AnchorContentToggle").click(function () {
-            //     var text = $(this).html();
-            //     if (text == "目录[-]") {
-            //         $(this).html("目录[+]");
-            //         $(this).attr({"title": "展开"});
-            //     } else {
-            //         $(this).html("目录[-]");
-            //         $(this).attr({"title": "收起"});
-            //     }
-            //     $("#AnchorContent").toggle();
-            // });
         }
 
         GenerateContentList();
