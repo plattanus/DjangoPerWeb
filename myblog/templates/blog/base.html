@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+
+    {% block title %}
+        <title>plattanus - blog</title>
+    {% endblock %}
+
+    {% block meta %}
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Python,Django,算法,plattanus"/>
+        <meta name="description" content="plattanus's blog"/>
+    {% endblock %}
+    <meta name="author" content="plattanus"/>
+    <link rel="shortcut icon" href="/static/images/favicon.ico"/>
+
+    <!--CSS-->
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="/static/css/default.css"/>
+    <link rel="stylesheet" href="/static/css/public.css"/>
+    <link rel="stylesheet" href="/static/css/animation.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/skin_1.css" title="qingxin"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/skin_2.css" title="jianyue"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/skin_3.css" title="qingshuang"/>
+    <link rel="stylesheet" href="/static/css/font-icon.css"/>
+    <!--JS-->
+
+    <script src="/static/js/jquery.2.1.4.min.js"></script>
+    <script src="/static/js/my.js"></script>
+
+    <script src="/static/js/superbg.min.js"></script>
+    <script src="/static/js/superbg-custom.js"></script>
+    <script src="/static/js/tooltip.js"></script>
+    <script src="/static/js/layer/layer.js"></script>
+
+
+</head>
+
+<body class="nobg">
+
+<!--导航开始-->
+{% include "blog/header.html" %}
+<!--导航结束-->
+
+<!--主题框架开始-->
+<div class="container">
+    <!--左侧开始-->
+    {% block content %}
+    {% endblock %}
+    <!--左侧结束-->
+
+    <!--右侧开始-->
+    {% include "blog/right.html" %}
+    <!--END右侧-->
+</div>
+<!--主题框架结束-->
+
+
+</body>
+</html>

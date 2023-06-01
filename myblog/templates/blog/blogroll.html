@@ -1,0 +1,13 @@
+<!--友情链接-->
+<div class="side-link animation-div">
+    <h4 class="index-title"><i class="el-paper-clip"></i>Links
+        <a href="mailto:plattanus@outlook.com?subject=Apply for a link&body=blog name:……blog describe:……blog url:……">
+            <i class="el el-plus"></i>Apply
+        </a>
+    </h4>
+    <ul>
+        {% for blog in blogroll %}
+        <li><a href="{{ blog.url }}" target="_blank" title="{{ blog.desc }}">{{ blog.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,28 @@
+<div class="pagination">
+    <div class="list-page">
+        <ul class="post-data">
+            <li><a>page {{ pages.current_page }} - {{ pages.total_page }} </a> <a>total of {{ pages.total_number }} articles</a></li>
+        </ul>
+    </div>
+    <ul>
+        {% if pages.current_page == 1 %}
+            <li class="active"><a>front page</a></li>
+        {% else %}
+            <li><a href="?page=1">front page</a></li>
+        {% endif %}
+
+        {% if pages.current_page >= 2 %}
+            <li><a href="?page={{ pages.current_page|add:-1 }}">previous page</a></li>
+        {% else %}
+            <li class="active"><a>previous page</a></li>
+        {% endif %}
+
+        {% if pages.current_page < pages.total_page %}
+            <li><a href="?page={{ pages.current_page|add:1 }}">next page</a></li>
+            <li><a href="?page={{ pages.total_page }}">last page</a></li>
+        {% else %}
+            <li class="active"><a>next page</a></li>
+            <li class="active"><a>last page</a></li>
+        {% endif %}
+    </ul>
+</div>
