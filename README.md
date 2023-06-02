@@ -7,7 +7,7 @@ python3.9 Django4
 ##### 准备
 
 ```
-pip install -r requirements.txt
+pip install Django PyMySQL
 修改数据库
 修改常言用户
 ```
